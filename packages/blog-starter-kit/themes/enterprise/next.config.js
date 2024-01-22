@@ -94,3 +94,16 @@ const config = {
 };
 
 module.exports = config;
+
+ async rewrites() {
+    return [
+      {
+        source: "/blog",
+        destination: "https://samyakj.tech/blog", 
+      },
+      {
+        source: "/blog/:path*",
+        destination: "https://samyakj.tech/blog/:path*", 
+      },
+    ];
+  },
